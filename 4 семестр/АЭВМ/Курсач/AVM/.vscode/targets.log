@@ -1,0 +1,587 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for Windows32
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Mon May 16 21:49:41 2022
+
+# Variables
+
+# environment
+SYSTEMDRIVE = C:
+# environment
+JAVA_HOME = C:\Program Files\OpenJDK\jdk-17.0.1
+# environment
+LC_ALL = C
+# environment
+MINGW-W64 = C:\msys64\mingw64\bin
+# environment
+USERPROFILE = C:\Users\artea
+# environment
+VBOX_MSI_INSTALL_PATH = F:\Program Files\qemu\
+# environment
+LOCALAPPDATA = C:\Users\artea\AppData\Local
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ce3a2396-f903-475b-a763-41b207f51cb8-sock
+# environment
+VSCODE_CWD = F:\Google Drive\�����\4 �������\����\������\AVM
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
+PROCESSOR_LEVEL = 23
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_29284_JQXDNOIHGTPKGNAJ
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\artea\AppData\Roaming\Code\CachedData\da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+TMP = C:\Users\artea\AppData\Local\Temp
+# default
+.INCLUDE_DIRS = .
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\artea\OneDrive
+# makefile
+CURDIR := f:/Google Drive/�����/4 �������/����/������/AVM
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST := makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 29284
+# environment
+CLION = C:\Program Files\JetBrains\CLion 2020.1\bin;
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# makefile (from 'makefile', line 1)
+FLAGS = -Wall -Werror -g
+# automatic
+*F = $(notdir $*)
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# environment
+PHPSTORM = C:\Program Files\JetBrains\PhpStorm 2021.1.1\bin;
+# environment
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"6c87e287770fa80b3245e0a037b935fb.ru","_translationsConfigFile":"C:\\Users\\artea\\AppData\\Roaming\\Code\\clp\\6c87e287770fa80b3245e0a037b935fb.ru\\tcf.json","_cacheRoot":"C:\\Users\\artea\\AppData\\Roaming\\Code\\clp\\6c87e287770fa80b3245e0a037b935fb.ru","_resolvedLanguagePackCoreLocation":"C:\\Users\\artea\\AppData\\Roaming\\Code\\clp\\6c87e287770fa80b3245e0a037b935fb.ru\\da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"C:\\Users\\artea\\AppData\\Roaming\\Code\\clp\\6c87e287770fa80b3245e0a037b935fb.ru\\corrupted.info","_languagePackSupport":true}
+# environment
+ONEDRIVECONSUMER = C:\Users\artea\OneDrive
+# default
+MAKE_HOST := Windows32
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := sh.exe
+# makefile (from 'makefile', line 2)
+USER_DIR_S = build
+# environment
+HOMEPATH = \Users\artea
+# default
+MAKECMDGOALS := all
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = C:\ProgramData\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\tools\php81;C:\Program Files\OpenJDK\jdk-17.0.1\bin;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\altera\81\quartus\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\artea\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\artea\AppData\Local\Programs\Python\Python310\;C:\Users\artea\AppData\Local\Microsoft\WindowsApps;C:\Users\artea\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\CLion 2020.1\bin;;C:\Program Files\JetBrains\PhpStorm 2021.1.1\bin;;C:\Users\artea\AppData\Roaming\Composer\vendor\bin;C:\Users\artea\AppData\Roaming\npm;C:\Users\artea\.dotnet\tools;C:\tools\dart-sdk\bin;C:\Users\artea\AppData\Roaming\Pub\Cache\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2022.1\bin;;C:\tools\flutter\bin
+# environment
+COMPUTERNAME = DEFAULTSPC
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132950825618725680
+# environment
+LOGONSERVER = \\DEFAULTSPC
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = artea
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = DEFAULTSPC
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+# makefile
+.DEFAULT_GOAL := all
+# default
+MAKE_VERSION := 4.3
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# makefile (from 'makefile', line 3)
+EXECUTABLE = bin/program
+# environment
+USERDOMAIN_ROAMINGPROFILE = DEFAULTSPC
+# environment
+NUMBER_OF_PROCESSORS = 16
+# makefile (from 'makefile', line 4)
+DISK = bin/disk
+# environment
+PUBLIC = C:\Users\Public
+# environment
+APPDATA = C:\Users\artea\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+PYCHARM COMMUNITY EDITION = C:\Program Files\JetBrains\PyCharm Community Edition 2022.1\bin;
+# environment
+MSBUILDSDKSPATH = C:\Program Files\dotnet\
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = C:\Users\artea\AppData\Local\Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\d690cc9bcc86e3525f89863aa4b31661-1.67.1-main-sock
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+# environment
+PROCESSOR_REVISION = 7100
+# environment
+CHOCOLATEYTOOLSLOCATION = C:\tools
+# environment
+PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
+# variable set hash-table stats:
+# Load=107/1024=10%, Rehash=0, Collisions=13/187=7%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (key f:/Google Drive/�����/4 �������/����/������/AVM, mtime 1652712580): 18 files, no impossibilities.
+
+# 18 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+start:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 86):
+	./bin/program
+
+build/mySignal.o: src/mySignal.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 35):
+	gcc $(FLAGS) -c $^ -o $@
+
+# Not a target:
+src/myTerm.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/mySimpleComputer.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/disk.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/myBigChars.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/printConsole.o: src/printConsole.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 29):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/cu.o: src/cu.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 41):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/disk.o: src/disk.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 77):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/libmySignal.a: build/mySignal.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 68):
+	ar rc $(USER_DIR_S)/libmySignal.a $(USER_DIR_S)/mySignal.o
+
+build/myBigChars.o: src/myBigChars.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 26):
+	gcc $(FLAGS) -c $^ -o $@
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 89):
+	rm -rf $(USER_DIR_S)/*.o
+	rm -rf $(USER_DIR_S)/*.a
+	rm -rf bin/program
+
+build/mySimpleComputer.o: src/mySimpleComputer.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 17):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/libmySimpleComputer.a: build/mySimpleComputer.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 20):
+	ar rc $(USER_DIR_S)/libmySimpleComputer.a $(USER_DIR_S)/mySimpleComputer.o
+
+# Not a target:
+src/myReadkey.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/main_7.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-16 21:28:36
+#  File has been updated.
+#  Successfully updated.
+
+build/libbasic.a: build/basic.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 53):
+	ar rc $(USER_DIR_S)/libbasic.a $(USER_DIR_S)/basic.o
+
+# Not a target:
+src/cu.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/asm.o: src/asm.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 44):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/libcu.a: build/cu.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 50):
+	ar rc $(USER_DIR_S)/libcu.a $(USER_DIR_S)/cu.o
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: bin/program bin/disk
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+build/libasm.a: build/asm.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 56):
+	ar rc $(USER_DIR_S)/libasm.a $(USER_DIR_S)/asm.o
+
+# Not a target:
+src/basic.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/program: build/main.o build/libmySimpleComputer.a build/libmyTerm.a build/libbasic.a build/libasm.a build/libmyBigChars.a build/libcu.a build/libprintConsole.a build/libmyReadkey.a build/libmySignal.a
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  recipe to execute (from 'makefile', line 11):
+	gcc $(FLAGS) -o $@ $^ -Lbuild -lmySimpleComputer -Lbuild -lmyTerm -Lbuild -lmyBigChars -Lbuild -lbasic -Lbuild -lasm -Lbuild -lprintConsole -Lbuild -lmyReadkey -Lbuild -lmySignal -Lbuild -lcu
+
+# Not a target:
+src/mySignal.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-16 21:28:36
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/asm.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/basic.o: src/basic.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 38):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/libmyReadkey.a: build/myReadkey.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 62):
+	ar rc $(USER_DIR_S)/libmyReadkey.a $(USER_DIR_S)/myReadkey.o
+
+build/libprintConsole.a: build/printConsole.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 65):
+	ar rc $(USER_DIR_S)/libprintConsole.a $(USER_DIR_S)/printConsole.o
+
+hard:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 83):
+	./bin/disk
+
+build/main_7.o: src/main_7.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 74):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/libmyBigChars.a: build/myBigChars.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 59):
+	ar rc $(USER_DIR_S)/libmyBigChars.a $(USER_DIR_S)/myBigChars.o
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/myTerm.o: src/myTerm.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 23):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/main.o: src/main.c
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := build/main.o
+# automatic
+# * := 
+# automatic
+# < := src/main.c
+# automatic
+# + := src/main.c
+# automatic
+# % := 
+# automatic
+# ^ := src/main.c
+# automatic
+# ? := src/main.c
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  recipe to execute (from 'makefile', line 14):
+	gcc $(FLAGS) -c $^ -o $@
+
+.PHONY: all clean hard start
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/disk: build/main_7.o build/libdisk.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 71):
+	gcc $(FLAGS) -o $@ $^ -Lbuild -ldisk
+
+build/libmyTerm.a: build/myTerm.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 47):
+	ar rc $(USER_DIR_S)/libmyTerm.a $(USER_DIR_S)/myTerm.o
+
+# Not a target:
+src/printConsole.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/myReadkey.o: src/myReadkey.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 32):
+	gcc $(FLAGS) -c $^ -o $@
+
+build/libdisk.a: build/disk.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 80):
+	ar rc $(USER_DIR_S)/libdisk.a $(USER_DIR_S)/disk.o
+
+# files hash-table stats:
+# Load=44/1024=4%, Rehash=0, Collisions=1/113=1%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 61 / storage = 751 B / avg = 12 B
+# current buf: size = 8174 B / used = 751 B / count = 61 / avg = 12 B
+
+# strcache performance: lookups = 124 / hit rate = 50%
+# hash-table stats:
+# Load=61/8192=1%, Rehash=0, Collisions=0/124=0%
+# Finished Make data base on Mon May 16 21:49:41 2022
+
+ 

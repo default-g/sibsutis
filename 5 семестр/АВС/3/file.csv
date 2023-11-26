@@ -1,0 +1,10 @@
+MemoryType;BlockSize;ElementType;BufferSize;LaunchNum;Timer;WriteTime;AverageWriteTime;WriteBandWIdth;AbsError(write);RelError(write);ReadTime;AverageReadTime;ReadBandWidth;AbsError(read);RelError(read)
+RAM;4194304;char;4194304;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan
+RAM;8388608;char;8388608;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan
+RAM;12582912;char;12582912;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan
+RAM;16777216;char;16777216;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan
+RAM;20971520;char;20971520;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan
+RAM;25165824;char;25165824;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan
+RAM;29360128;char;29360128;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan
+RAM;33554432;char;33554432;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan
+RAM;37748736;char;37748736;10;chrono;0;0.000000;0;0.000000;-nan;0;0.000000;0;0.000000;-nan

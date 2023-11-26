@@ -1,0 +1,32 @@
+max_sizes:- writeln('Введите имя файла'), read(Filename),
+     check_exist(Filename),
+     open(Filename,read,F), set_input(F),
+     max_size(F).
+     % tell('Finish.txt'),
+     %write_screen(F),
+     % told,
+     %close(F).
+
+check_exist(Filename):- exists_file(Filename),!.
+
+check_exist(_):- writeln('Такого файла нет'), fail.
+
+write_screen(_):-at_end_of_stream,!.
+
+write_screen(F):- read_line_to_codes(F,L), string_to_list(S,L),
+     writeln(S), write_screen(F).
+
+max_size(F):- read_line_to_codes(F,L), string_to_list(S,L),
+            atomic_list_concat(K," ",S),
+            X is 0,
+            test(K, X),
+            writeln(S).
+
+test([Head|K],X):- string_length(Head, Size),
+     writeln(Head),
+     writeln(Size),
+     (Size > X, X is Size);
+     writeln(X),
+     test(K,X).
+     
+test([],_):-!.

@@ -1,0 +1,9 @@
+-- SELECT * FROM cust WHERE rating = 300;
+-- SELECT ord.amt, ord.odate, ord.cnum FROM ord;
+-- SELECT cust.rating, cust.cname FROM cust WHERE rating >= 200
+-- SELECT DISTINCT ord.odate FROM ord
+-- SELECT sal.sname, sal.city FROM sal WHERE sal.city != 'London' AND sal.comm > 0.10
+-- SELECT * FROM cust WHERE (cust.rating > 100 AND cust.city='Rome')
+-- SELECT * FROM ord WHERE
+    -- (ord.snum=1001 OR ord.snum=1003)
+    -- (ord.snum IN (1001, 1003))

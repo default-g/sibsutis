@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src = "script.js"> 
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #start {
+        color:green;
+
+    }
+</style>
+<body>
+    <img src = "s1.gif" id = "santa">
+    <form>
+        <button type="button" onclick = "santaStop(); document.getElementById('start').setAttribute('style', 'color:green;')">Стоп</button>
+        <button type="button" id = "start" onclick="santaStart(); document.getElementById('start').setAttribute('style', 'color:black;');">Старт</button>
+        <button type="button" onclick="speedDown();">Медленнее</button>
+        <button type="button" onclick ="speedUp();">Быстрее</button>
+    </form>
+
+
+</body>
+</html>

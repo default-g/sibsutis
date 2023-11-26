@@ -1,0 +1,21 @@
+|31
+Y <= 74153M:inst.Y
+A => 74153M:inst.A
+B => 74153M:inst.B
+X3 => 74153M:inst.C3
+X2 => 74153M:inst.C2
+X1 => 74153M:inst.C1
+X0 => 74153M:inst.C0
+
+
+|31|74153M:inst
+Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+C0 => 1.IN3
+C1 => 2.IN3
+C2 => 3.IN3
+C3 => 4.IN3
+
+

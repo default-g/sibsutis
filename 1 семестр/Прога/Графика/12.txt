@@ -1,0 +1,32 @@
+#include <stdlib.h>
+#include <graphics.h>
+#include <math.h>
+int main(){	
+initwindow(640, 480);
+int gdriver = DETECT, gmode;
+line(300,0,300,480); line(0,200,640,200); 
+//outtextxy(300, 180, "f(x) = (x+2)^2");
+//outtextxy(319, 50, "f(x) = 9;");
+moveto(0, 200);
+
+
+float x = -1;
+
+do {
+float y=sqrt(1-x*x);
+lineto(300+x*25,200-(y*25));
+x+=0.01;
+}while(x<=1);
+x=1;
+float y=sqrt(1-x*x);
+lineto(300+x*25,200-(y*25));
+
+setfillstyle(7, CYAN);
+
+floodfill(299,199, 15);
+floodfill(301,199, 15);
+setcolor(15);
+ getchar();
+ closegraph();        
+ return 0;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".spoiler_links").mouseenter(function () {
+          $(this).children("div.spoiler_body").fadeIn("fast");
+        });
+        $(".spoiler_links").mouseleave(function () {
+          $(this).children("div.spoiler_body").fadeOut("fast");
+        });
+      });
+    </script>
+    <style type="text/css">
+      body {
+          background-color:cornsilk;
+      }
+      .spoiler_body {
+        display: none;
+        float: left;
+        width: 220px;
+        background-color: bisque;
+        text-align: left;
+        position: absolute;
+        z-index: 99;
+      }
+
+      .spoiler_links {
+        float: left;
+        margin: 0px 5px;
+        width: 220px;
+        background-color: bisque;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .spoiler_links:hover {
+        background-color: whitesmoke;
+      }
+      .element, a{
+          text-align: center;
+          color:black;
+          text-decoration: none;
+          outline: none;
+      }
+      .element:hover {
+        background-color: whitesmoke;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="spoiler_links">
+      Menu
+      <div class="spoiler_body">
+        <a href = "#" onmouseover = "alert('Кнопка не работает');"><div class="element" >SUB</div></a>
+        <a href = "#"><div class="element">SUB</div></a>
+        <a href = "#"><div class="element">SUB</div></a>
+      </div>
+    </div>
+
+    <div class="spoiler_links">
+      Menu
+      <div class="spoiler_body">
+        <a href = "#"><div class="element">SUB</div></a>
+        <a href = "#"><div class="element">SUB</div></a>
+        <a href = "#"><div class="element">SUB</div></a>
+      </div>
+    </div>
+
+    <div class="spoiler_links">
+      Menu
+      <div class="spoiler_body">
+        <a href = "#"><div class="element">SUB</div></a>
+        <a href = "#"><div class="element">SUB</div></a>
+        <a href = "#"><div class="element">SUB</div></a>
+      </div>
+    </div>
+  </body>
+</html>

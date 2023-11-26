@@ -1,0 +1,8 @@
+17. chmod u-r file.txt
+18. chmod o-r file.txt
+19. chmod u-w file.txt
+20. chmod o-w file.txt
+21. chmod o-w ~ && chmod o+w ~
+22. chmod u-w ~
+23. sudo setfacl -m "u:vladimir:rwx" file.txt
+24. ?

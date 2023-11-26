@@ -1,0 +1,43 @@
+<style>
+    * {
+        padding: 5px;
+    }
+    input {
+        margin-right: 50%;
+        margin-left: 50%;
+    }
+</style>
+
+<html>
+    <form action="z10-2.php" method="post">
+        <table>
+            <tr>
+                <th>таблицы</td>
+                <td>Отобразить</td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>структуру</th>
+                <th>содержимое</th>
+            </tr>
+            <tr>
+                <th>Продавцы (sal)</th>
+                <td><input type="checkbox" name="sal[structure]"></td>
+                <td><input type="checkbox" name="sal[content]"></td>
+            </tr>
+            <tr>
+                <th>Покупатели (cust)</th>
+                <td><input type="checkbox" name="cust[structure]"></td>
+                <td><input type="checkbox" name="cust[content]"></td>
+            </tr>
+            <tr>
+                <th>Заказы (ord)</th>
+                <td><input type="checkbox" name="ord[structure]"></td>
+                <td><input type="checkbox" name="ord[content]"></td>
+            </tr>
+            <tr>
+                <td><button>Отобразить!</button></td>
+            </tr>
+        </table>
+    </form>
+</html>

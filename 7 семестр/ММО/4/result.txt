@@ -1,0 +1,76 @@
+2023-10-15 23:07:44.174896: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-10-15 23:07:44.253909: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2023-10-15 23:07:44.254072: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2023-10-15 23:07:44.254175: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2023-10-15 23:07:44.277215: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-10-15 23:07:44.277883: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-10-15 23:07:46.219086: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/default/.local/lib/python3.9/site-packages/numpy/core/getlimits.py:542: UserWarning: Signature b'\x00\xd0\xcc\xcc\xcc\xcc\xcc\xcc\xfb\xbf\x00\x00\x00\x00\x00\x00' for <class 'numpy.longdouble'> does not match any known type: falling back to type probe function.
+This warnings indicates broken support for the dtype!
+  machar = _get_machar(dtype)
+WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.RMSprop.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 32)        896
+
+ max_pooling2d (MaxPooling2  (None, 15, 15, 32)        0
+ D)
+
+ conv2d_1 (Conv2D)           (None, 13, 13, 64)        18496
+
+ max_pooling2d_1 (MaxPoolin  (None, 6, 6, 64)          0
+ g2D)
+
+ conv2d_2 (Conv2D)           (None, 4, 4, 128)         73856
+
+ flatten (Flatten)           (None, 2048)              0
+
+ dense (Dense)               (None, 256)               524544
+
+ dropout (Dropout)           (None, 256)               0
+
+ activity_regularization (A  (None, 256)               0
+ ctivityRegularization)
+
+ dense_1 (Dense)             (None, 10)                2570
+
+=================================================================
+Total params: 620362 (2.37 MB)
+Trainable params: 620362 (2.37 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/15
+1563/1563 [==============================] - 42s 27ms/step - loss: 1.7760 - accuracy: 0.4100 - val_loss: 1.3998 - val_accuracy: 0.5448
+Epoch 2/15
+1563/1563 [==============================] - 37s 23ms/step - loss: 1.3360 - accuracy: 0.5796 - val_loss: 1.2186 - val_accuracy: 0.6119
+Epoch 3/15
+1563/1563 [==============================] - 31s 20ms/step - loss: 1.1501 - accuracy: 0.6467 - val_loss: 1.1725 - val_accuracy: 0.6233
+Epoch 4/15
+1563/1563 [==============================] - 39s 25ms/step - loss: 1.0480 - accuracy: 0.6800 - val_loss: 0.9862 - val_accuracy: 0.7005
+Epoch 5/15
+1563/1563 [==============================] - 41s 26ms/step - loss: 0.9843 - accuracy: 0.7056 - val_loss: 1.1934 - val_accuracy: 0.6301
+Epoch 6/15
+1563/1563 [==============================] - 48s 30ms/step - loss: 0.9359 - accuracy: 0.7233 - val_loss: 0.9924 - val_accuracy: 0.6962
+Epoch 7/15
+1563/1563 [==============================] - 47s 30ms/step - loss: 0.9067 - accuracy: 0.7320 - val_loss: 1.0261 - val_accuracy: 0.7039
+Epoch 8/15
+1563/1563 [==============================] - 51s 32ms/step - loss: 0.8869 - accuracy: 0.7388 - val_loss: 1.0414 - val_accuracy: 0.6922
+Epoch 9/15
+1563/1563 [==============================] - 49s 31ms/step - loss: 0.8766 - accuracy: 0.7429 - val_loss: 1.0668 - val_accuracy: 0.6870
+Epoch 10/15
+1563/1563 [==============================] - 48s 31ms/step - loss: 0.8625 - accuracy: 0.7486 - val_loss: 1.0452 - val_accuracy: 0.6689
+Epoch 11/15
+1563/1563 [==============================] - 45s 29ms/step - loss: 0.8566 - accuracy: 0.7499 - val_loss: 0.9820 - val_accuracy: 0.7165
+Epoch 12/15
+1563/1563 [==============================] - 46s 29ms/step - loss: 0.8398 - accuracy: 0.7554 - val_loss: 1.0908 - val_accuracy: 0.7003
+Epoch 13/15
+1563/1563 [==============================] - 52s 33ms/step - loss: 0.8385 - accuracy: 0.7559 - val_loss: 1.0682 - val_accuracy: 0.6944
+Epoch 14/15
+1563/1563 [==============================] - 51s 33ms/step - loss: 0.8381 - accuracy: 0.7581 - val_loss: 1.3250 - val_accuracy: 0.6659
+Epoch 15/15
+1563/1563 [==============================] - 51s 33ms/step - loss: 0.8250 - accuracy: 0.7611 - val_loss: 1.1871 - val_accuracy: 0.6807
+313/313 - 2s - loss: 1.1871 - accuracy: 0.6807 - 2s/epoch - 7ms/step
+Test accuracy: 0.6807000041007996

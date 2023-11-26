@@ -1,0 +1,15 @@
+
+
+
+reWrite(S):- fronttoken(S,T,R), !, reWrite(R), write(T," ").
+reWrite(_).
+
+fronttoken(L,W,L1):-atom_chars(L,List),append(ListW,[' '|List1],List),!,
+    atom_chars(W,ListW),atom_chars(L1,List1).
+
+opengoal:-
+open("test.txt",read,In),
+open("temp.txt",write,Out),
+readln(A), reWrite(A), nl, eof(In),
+close(In), close(Out),
+deletefile("test.txt"), renamefile("temp.txt","test.txt").

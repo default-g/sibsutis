@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>COOKIE</h1>
+    <div id="hascookie">
+      <p id="greetings"></p>
+      <p id="amountofvisits"></p>
+      <p id="lastvisit"></p>
+    </div>
+
+    <form name="myform" action="">
+      <input type="text" name="username" />
+      <input
+        type="button"
+        value="Зарегистрироваться"
+        onclick="registration()"
+      />
+      <input type="button" id = "deletevisits" value="Обнулить посещения"
+      onclick="document.cookie='amountofvisits=' + 0; location.reload()"">
+    </form>
+    
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+-- SELECT * FROM cust WHERE cust.city BETWEEN 'C%' AND 'R%'
+-- SELECT * FROM cust WHERE cust.city LIKE '%e%'
+-- SELECT SUM(ord.amt) FROM ord WHERE ord.snum=1002
+-- SELECT COUNT(DISTINCT ord.odate) FROM ord WHERE ord.amt < 1000
+-- SELECT ord.snum, MIN(ord.amt) FROM ord GROUP BY ord.snum
+-- SELECT MAX(cust.cname) FROM cust WHERE cust.cname LIKE 'C%'
+-- SELECT ord.odate, MAX(ord.onum) FROM ord GROUP BY ord.odate

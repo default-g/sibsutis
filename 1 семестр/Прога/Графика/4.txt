@@ -1,0 +1,27 @@
+#include <stdlib.h>
+#include <graphics.h>
+#include <math.h>
+int main()
+{	
+initwindow(640, 480);
+line(300,0,300,480); line(0,200,640,200); 
+outtextxy(100, 180, "f(x) = 0;");
+outtextxy(370, 180, "f(x) = sinx;");
+moveto(0, 200);
+
+float x = 0;
+
+while(x<=3.14) {
+float y=sin(x);
+lineto(300+x*25, 200-(y*25));
+x+=0.01;
+}
+
+setfillstyle(7, MAGENTA );
+floodfill(304,195, 15);
+floodfill(306,195, 15);
+setcolor(15);
+ getchar();
+ closegraph();        
+ return 0;
+}

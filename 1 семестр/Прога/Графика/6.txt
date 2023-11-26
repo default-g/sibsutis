@@ -1,0 +1,33 @@
+#include <stdlib.h>
+#include <graphics.h>
+#include <math.h>
+int main()
+{	
+initwindow(640, 480);
+line(300,0,300,480); line(0,200,640,200); 
+outtextxy(150, 80, "f(x) = 4;");
+outtextxy(400, 120, "f(x) = (x-2)^2;");
+moveto(0, 200);
+
+float x = -100;
+
+while(x<=100) {
+float y=(x-2) * (x-2);
+lineto(300+x*25, 200-(y*25));
+x+=0.01;
+}
+x = -100;
+
+while(x<=100) {
+float y=4;
+lineto(300+x*25, 200-(y*25));
+x+=0.01;
+}
+
+setfillstyle(7, YELLOW );
+floodfill(350,190, 15);
+setcolor(15);
+ getchar();
+ closegraph();        
+ return 0;
+}

@@ -1,0 +1,7 @@
+-- SELECT ord.onum, FORMAT('%.2f евро', ord.amt * 0.85), cust.cname, cust.rating FROM ord, cust WHERE cust.cnum = ord.cnum AND cust.city NOT IN ('Berlin', 'Saint Jose' )
+-- SELECT ord.amt, ord.odate, sal.sname, cust.cname FROM ord, sal, cust WHERE ord.cnum=cust.cnum AND ord.snum=sal.snum AND ord.odate NOT LIKE "%08-03" AND ord.odate NOT LIKE "%08-06"
+-- SELECT cust.cname, SUM(ord.amt) FROM cust, ord WHERE cust.cnum=ord.cnum AND cust.city NOT IN ('London', 'Barcelone') GROUP BY cust.cnum ORDER BY cust.cname
+-- SELECT ord.onum, ord.amt, sal.sname, cust.cname from ord, sal, cust WHERE ord.cnum = cust.cnum AND ord.snum = sal.snum AND cust.city BETWEEN 'B%' AND 'N%' AND sal.city BETWEEN 'B%' AND 'N%'
+-- SELECT first.onum, second.onum FROM ord first, ord second, cust WHERE first.cnum=cust.cnum AND first.snum=cust.snum AND second.cnum=cust.cnum AND second.snum=cust.snum AND first.onum < second.onum
+-- SELECT cust.cname FROM cust WHERE cust.snum IN (SELECT sal.snum FROM sal WHERE sal.comm > 0.12)
+-- SELECT ord.snum, SUM(ord.amt) FROM ord GROUP BY ord.snum HAVING SUM(ord.amt) > MAX(ord.amt)

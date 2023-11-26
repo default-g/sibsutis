@@ -1,0 +1,34 @@
+#include <stdlib.h>
+#include <graphics.h>
+#include <math.h>
+int main()
+{	
+initwindow(640, 480);
+line(300,0,300,480); line(0,200,640,200); 
+outtextxy(140,100,"f(x) = x*x;");
+outtextxy(100,150,"f(x) = cosX;");
+moveto(0, 200);
+
+float x = -100;
+
+while(x<=100) {
+float y=x*x;
+lineto(300+x*25, 200-(y*25));
+x+=0.5;
+}
+
+x=-100;
+moveto(0, 200);
+while(x<=100){
+float y=cos(x);
+lineto(300+x*25, 200-(y*25));
+x=x+0.5;
+}
+setfillstyle(7, BLUE);
+floodfill(304,195, 15);
+floodfill(299,195, 15);
+setcolor(15);
+ getchar();
+ closegraph();        
+ return 0;
+}

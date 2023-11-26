@@ -1,0 +1,15 @@
+|31
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+D4 => inst.CLK
+D4 => inst3.CLK
+D4 => inst4.CLK
+D4 => inst5.CLK
+D0 => inst.DATAIN
+Q1 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.DATAIN
+Q2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst4.DATAIN
+Q3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst5.DATAIN
+
+

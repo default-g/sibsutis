@@ -1,0 +1,19 @@
+Десктопы и ноутбуки
+
+  Lenovo (24,3%)
+  HP Inc (23,6%)
+  Dell Tech (17,5%)
+
+Ноутбуки
+
+  HP Inc (25%)
+  Lenovo (29%)
+  Dell Tech (17%)
+
+Смартфоны
+
+  Samsung (20,9%)
+  Huawei (17,0%)  
+  Apple (14,0%)
+  Xiaomi (8,8%)
+  OPPO (8,1%)

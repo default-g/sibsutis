@@ -1,0 +1,75 @@
+<style>
+    div {
+        margin-bottom: 10px;
+    }
+</style>
+
+<html>
+    <form action="5b.php" method="post">
+        <h1>Топ 10 вопросов по PHP</h1>
+        <div>
+            <label for="name">Ваше имя:</label><br />
+            <input type="text" name="name" />
+        </div>
+        <div>
+            <label for="dot-question">Что делает точка?: </label> <br />
+            <select name="dot-question">
+                <option value="1">Заканчивает предложение</option>
+                <option value="2">Конкатенирует</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="ampersant-qustion">Что означает & в начале переменной?: </label><br />
+            <select type="select" name="ampersant-qustion" >
+                <option value="1">Союз</option>
+                <option value="2">Берет переменную по ссылке</option>
+            </select>
+        </div>
+        <div>
+            <label for="checkbox-radio-question">Чем отличется checkbox от radio?: </label><br />
+            <select type="select" name="checkbox-radio-question" >
+                <option value="1">По radio песни играют</option>
+                <option value="2">Возможность множественного выбора</option>
+            </select>
+        </div>
+        <div>
+            <label for="get-post-difference">Чем отличается GET и POST?: </label><br />
+            <select type="select" name="get-post-difference">
+                <option value="1">Только названием</option>
+                <option value="2">Это два разных HTTP метода</option>
+            </select>
+        </div>
+        <div>
+            <label for="reverse-sort">Как отсортировать массив в обратном порядке?: </label><br />
+            <select type="select" name="reverse-sort">
+                <option value="1">Написать "пожалуйста"</option>
+                <option value="2">Добавить "r" в сигнатуру функции</option>
+            </select>
+        </div>
+        <div>
+            <label for="php-support">Поддерживает ли PHP типизированные параметры в функциях?: </label><br />
+            <select type="select" name="php-support">
+                <option value="1">Нет</option>
+                <option value="2">Да</option>
+            </select>
+        </div>
+        <div>
+            <label for="world-war">Когда началась Вторая Мировая война?: </label><br />
+            <select type="select" name="world-war">
+                <option value="1">Что?</option>
+                <option value="2">Волынская резня была</option>
+                <option value="4">В 1941</option>
+                <option value="5">В 1939</option>
+            </select>
+        </div>
+        <div>
+            <label for="echo">Что такое echo?: </label><br />
+            <select type="select" name="echo">
+                <option value="1">Функция вывода</option>
+                <option value="2">Функция клонирования</option>
+            </select>
+        </div>
+        <button>Оправить</button>
+    </form>
+</html>

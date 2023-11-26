@@ -1,0 +1,33 @@
+1.block special, character special, character special, sticky directory, 
+character special
+2.	
+3.mkdir LAB1 -> cd LAB1
+4.ls /etc/ | grep services
+5.ls -a | grep "^\\." | wc -l
+6.ls -R /boot, find /boot -type f -size -1k | wc -l, sudo find /boot -type f -executable | wc -l
+7.У каталога /boot нет жестких связей, потому что он является корневым каталогом файловой системы и не может быть связан с другими каталогами. Жесткие связи могут быть созданы только для обычных файлов и каталогов внутри файловой системы.
+8. Файл создан с помощью vi, Флаги доступа при создании файла 664, Изменить права доступа можно с помощью команды chmod
+9. mkdir mydir
+cp myfile.txt mydir/
+cd mydir
+for i in {1..10}; do cp myfile.txt "myfile$i.txt"; done
+mv myfile{1..3}.txt ..
+rm -i myfile{4..10}.txt
+Флаг w (write) означает, что файл можно записывать. Если у файла нет прав на запись, то удалить его не получится.  
+10.PATH=bash: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:
+LOGANAME=vladimir
+HOME=/home/vladimir
+HOSTNAME=vladimir-IdeaPad-3-15ADA05
+PWD=/home/vladimir changed
+RANDOM=31245 changed
+11. 0 - успех, 2 - ошибка доступа
+12.ls -C /bin > file.txt && ls -a /usr/bin >> file.txt
+13. ls -la /usr/bin/g* | wc -l,  ls -la /usr/bin/t??| wc -l
+14.cat /etc/passwd | wc -l
+15.cat /etc/group | wc -l
+16.sudo getent shadow | grep '^[^:]*:.\?:' | cut -d: -f1
+17. chmod u-r file.txt
+18. chmod o-r file.txt
+19. chmod u-w file.txt
+20. chmod o-w file.txt
+21. chmod o-r ~ && chmod o+r ~

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "mytext">Вычисление площади</h1> <br>
+    <p>Выделите поле 'сторона'</p>
+    <form>
+        Сторона: <input type="text" id = "in" onselect="calculate(); changeText();"> <br>
+        Площадь: <input type="text" id ="out" readonly> <br>
+    </form>
+</body>
+
+<script type="text/javascript">
+    function calculate() {
+        var a = document.getElementById('in').value;
+        document.getElementById('out').value = a * a;
+    }
+    function changeText() {
+        document.getElementById("mytext").innerHTML = "Поменял текст";
+    }
+</script>
+</html>

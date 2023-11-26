@@ -1,0 +1,46 @@
+#include <stdlib.h>
+#include <graphics.h>
+#include <math.h>
+int main()
+{	
+initwindow(640, 480);
+line(300,0,300,480); line(0,200,640,200); 
+float x=-5; 
+float y=sqrt(25-x*x);
+moveto(300 + x*25, 200- y*25);
+outtextxy(30, 50, "FUNCTION  f1(x)=sqrt(25-x*x);");
+
+
+
+
+
+while(x<=5)
+{
+float y=sqrt(25-x*x);
+lineto(300+x*25, 200-(y*25));
+x=x+0.1;
+}
+lineto(300+5*25, 200-(y*25));
+
+
+
+x=-50;
+moveto(300 + 2 * 25, 200 - 2 * 25);
+ while(x<=50)
+{
+float y=2;
+lineto(300+x*25, 200-(y*25));
+x=x+0.1;
+}
+
+
+setfillstyle(7, GREEN);
+floodfill(299,198, 15);
+floodfill(301,198, 15);
+floodfill(299,100, 15);
+floodfill(301,100, 15);
+outtextxy(100, 158, "FUNCTION  f2(x)=2;");
+  getchar();
+ closegraph();        // çàêðûâàåì ãðàôè÷åñêîå îêíî
+ return 0;
+}

@@ -1,0 +1,47 @@
+<MarksInfo>
+	<Group name='ИП-014' faculty="ИВТ" course="2">
+		<Student name="Обухов Артём">
+			<Subject name="Метрология" mark="2"></Subject>
+			<Subject name="Архитектура Вычислительных Систем" mark="1"></Subject>
+			<Subject name="ООП" mark="1"></Subject>
+			<Subject name="Теория Массового Обслуживания" mark="2"></Subject>
+			<Subject name="Базы Данных" mark="1"></Subject>
+			<Subject name="Физическая Культура" mark="2"></Subject>
+		</Student>
+		<Student name="Малышев Владимир">
+			<Subject name="Метрология" mark="0"></Subject>
+			<Subject name="Архитектура Вычислительных Систем" mark="2"></Subject>
+			<Subject name="ООП" mark="2"></Subject>
+			<Subject name="Теория Массового Обслуживания" mark="0"></Subject>
+			<Subject name="Базы Данных" mark="1"></Subject>
+			<Subject name="Физическая Культура" mark="1"></Subject>
+		</Student>
+		<Student name="Столяров Денис">
+			<Subject name="Метрология" mark="2"></Subject>
+			<Subject name="Архитектура Вычислительных Систем" mark="1"></Subject>
+			<Subject name="ООП" mark="1"></Subject>
+			<Subject name="Теория Массового Обслуживания" mark="2"></Subject>
+			<Subject name="Базы Данных" mark="2"></Subject>
+			<Subject name="Физическая Культура" mark="0"></Subject>
+		</Student>
+	</Group>
+	<Group name='ИП-9000' faculty="ИВТ" course="6">
+		<Student name="Джон Коннор">
+			<Subject name="Метрология" mark="2"></Subject>
+			<Subject name="Архитектура Вычислительных Систем" mark="2"></Subject>
+			<Subject name="ООП" mark="2"></Subject>
+			<Subject name="Теория Массового Обслуживания" mark="2"></Subject>
+			<Subject name="Базы Данных" mark="2"></Subject>
+			<Subject name="Физическая Культура" mark="2"></Subject>
+		</Student>
+		<Student name="Джонни Браво">
+			<Subject name="Метрология" mark="1"></Subject>
+			<Subject name="Архитектура Вычислительных Систем" mark="1"></Subject>
+			<Subject name="ООП" mark="1"></Subject>
+			<Subject name="Теория Массового Обслуживания" mark="1"></Subject>
+			<Subject name="Базы Данных" mark="0"></Subject>
+			<Subject name="Физическая Культура" mark="2"></Subject>
+		</Student>
+
+	</Group>
+</MarksInfo>

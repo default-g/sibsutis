@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//RU">
+<HTML>
+<HEAD>
+<TITLE>Теория к лаб. работе N 2.1</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Windows-1251">
+<link REL="stylesheet" TYPE="text/css" HREF="mstyle.css">
+</HEAD>
+<BODY><P>
+<A NAME="forms">
+<h2> Формы </h2>
+<b>Формы</b></a> (Forms) позволяют запросить у пользователя информацию требуемую
+для дальнейшие работы сервера, например, "права доступа" для регистрации
+или комментарии о работе сервера.
+<b>Формы</b> составляются из одного (или нескольких) запросов
+к пользователю, ответом на которые должен быть ввод текста или выбор условий.
+<P>
+Передаваемая на сервер информация активизирует специальную программу
+для ее обработки (CGI Script).
+Активные программы помимо обработки запросов от пользователя,
+могут выполнять множество различных функций таких как: формирование
+активных WWW страниц, обращение к базам данных, поиск информации
+на сервере, запуск вычислительных программ и  выполнения разрешенных, в зависимости от ответа пользователя,
+действий по дальнейшему предоставлению информации.
+<P>
+Взаимодействие активных программ с протоколом передачи гипертекста
+(HTTP)
+организовано через спецификацию интерфейса между сервером httpd
+и внешними, вызываемыми программами -
+CGI (Common Gateway Interface).
+<P>
+Для создания <b>формы</b> используется
+команда
+FORM,
+внутри которой содержится как минимум одна команда
+INPUT.
+<P>
+Команда
+FORM
+задает тип запроса информации от пользователя.
+<p>
+Команда
+INPUT
+определяет способ и адрес для запрашиваемой от пользователя информации.
+<P>
+<a href="#forms"><img src="icons/up.gif" border=0></a><P>
+<b>Пример</b> задания <b>формы:</b>
+<p><table><tr><td bgcolor=aqua>
+<PRE>&lt;FORM ACTION="http://intranet/local" METHOD=POST&gt;
+&lt;P&gt;Имя пользователя
+&lt;BR&gt;
+&lt;INPUT NAME="CONTROL1" TYPE=TEXTBOX VALUE="Введите Ваше имя"&gt;
+&lt;P&gt;Пароль
+&lt;BR&gt;&lt;INPUT TYPE="PASSWORD" NAME="CONTROL2"&gt;
+&lt;P&gt;Выберете цвет
+&lt;BR&gt;&lt;INPUT TYPE="RADIO" NAME="CONTROL3" VALUE="0" CHECKED&gt;Красный
+&lt;INPUT TYPE="RADIO" NAME="CONTROL3" VALUE="1"&gt;Зеленый
+&lt;INPUT TYPE="RADIO" NAME="CONTROL3" VALUE="2"&gt;Голубой
+&lt;P&gt;Ваши комментарии
+&lt;BR&gt;&lt;TEXTAREA NAME="CONTROL4" ROWS="2" COLS="25"&gt;&lt;/TEXTAREA&gt;
+&lt;P&gt;&lt;INPUT NAME="CONTROL5" TYPE=CHECKBOX CHECKED&gt;
+          Подтвердить получение
+&lt;P&gt;&lt;INPUT TYPE="SUBMIT" VALUE="Готово" 
+          OnClick="alert('Это только пример')"&gt;
+&lt;INPUT TYPE="RESET" VALUE="Отменить"&gt;
+&lt;/FORM&gt;
+</PRE></table>
+<P><b>Что даст</b>:
+<hr>
+<FORM>
+<P>Имя пользователя<BR>
+<INPUT NAME="CONTROL1" TYPE=TEXTBOX VALUE="Введите Ваше имя">
+<P>Пароль<BR><INPUT TYPE="PASSWORD" NAME="CONTROL2">
+<P>Выберете цвет
+<BR><INPUT TYPE="RADIO" NAME="CONTROL3" VALUE="0" CHECKED>Красный
+<INPUT TYPE="RADIO" NAME="CONTROL3" VALUE="1">Зеленый
+<INPUT TYPE="RADIO" NAME="CONTROL3" VALUE="2">Голубой
+<P>Ваши комментарии
+<BR><TEXTAREA NAME="CONTROL4" ROWS="2" COLS="25"></TEXTAREA>
+<P><INPUT NAME="CONTROL5" TYPE=CHECKBOX CHECKED>Подтвердить получение
+<P><INPUT TYPE="button" VALUE="Готово" OnClick="alert('Это только пример')">
+<INPUT TYPE="RESET" VALUE="Отменить"">
+</FORM>
+<P>
+<a href="#forms"><img src="icons/up.gif" border=0></a><hr>
+<P>
+<A NAME="syntax"><H2>Синтаксис</H2></A>
+<TAB>Команда FORM определяет форму для заполнения в HTML документе. В одном документе может быть определено несколько форм для заполнения, но вложенные команды FORM не
+разрешены. Формат команды FORM выглядит следующим образом:
+<P>
+<table><tr><td bgcolor=aqua>
+<Pre>&lt;FORM ACTION="url" METHOD="POST"&gt; ... &lt;/FORM&gt</Pre>
+</td></tr></table>
+<P>
+Атрибуты команды FORM:
+<DL>
+<DT><STRONG>ACTION</STRONG>=<i>url</i>
+<DD>URL адрес сервера
+запросов, куда будет отослано содержание формы после подтверждения; Если
+это поле отсутствует, будет использован URL адрес текущего документа.
+<DT><STRONG>METHOD</STRONG>=<i>get-post</i>
+<dd>
+HTTP/1.0 метод используемый для посылки содержания заполненной формы на сервер.
+Этот метод зависит от того, как работает конкретный сервер запросов. Настоятельно рекомендуется
+использование метода POST. Возможные варианты следующие:
+<UL><LI>GET это метод по умолчанию, который приводит к добавлению содержимого заполненной формы к URL, как и в нормальном запросе.
+<LI>POST при использовании этого метода содержимое заполненной формы пересылается не как
+часть URL, а как содержимое тела запроса.
+</UL>
+<DT><STRONG>ENCTYPE</STRONG>=
+<DD>задает тип кодирования содержимого заполненной формы.
+Этот атрибут действует только
+когда используется метод POST и даже в этом случае имеет только одно возможное значение (которое является значением по умолчанию) -
+<tt>application/x-www-form-urlencoded.</tt> (За исключением случая, когда на сервер
+клиентом посылается file - File - Upload).
+<br>Передается через переменную окружения <tt>CONTENT_TYPE</tt>.
+<DT><STRONG>TARGET</STRONG>=<i>window</i>
+<DD>Определяет положение ответа сервера по получению формы
+(по аналогии с командой
+A).<br>
+Значения параметра <i>window</i>:
+<table width=90%><tr><td valign=top><i>window</i></td>
+<td valign=top>имя окна, в котором будет выведен результат, если указанное
+имя отсутствует, то результат будет показан в новом окне;
+</td></tr>
+<tr><td valign=top><b><tt>_blank</tt></b></td>
+<td align=top>показать результат в новом окне;
+</td></tr>
+<tr><td valign=top><b><tt>_parent</tt></b></td>
+<td valign=top>показать результат в родительском окне;
+</td></tr>
+<tr><td valign=top><b><tt>_self</tt></b></td>
+<td valign=top>показать результат в том же окне;
+</td></tr>
+<tr><td valign=top><b><tt>_top</tt></b></td>
+<td valign=top>показать результат в основном окне.</td></tr>
+</table>
+</DL>
+<P>
+Внутри команды FORM может находиться все, что угодно, кроме другого
+оператора FORM. Согласно
+спецификации, для задания интерфейсных элементов внутри команды FORM
+используются команды INPUT,
+SELECT, и TEXTAREA.<P>
+<a href="#forms"><img src="icons/up.gif" border=0></a>
+<HR>
+
+<H2><A NAME="input">Команда INPUT</A></H2>
+<TAB>Команда INPUT используется для задания простого элемента ввода внутри
+FORM. Это одиночная команда, ее
+ничего не окружает и она не имеет закрывающей команды
+- т.е. он используется подобно команде
+IMG.
+<P>
+Атрибуты команды INPUT:
+<DL>
+<DT><strong>TYPE</strong>=<i>параметр</I>
+<DD>Параметр принимает одно из следующих значений:
+<table width=90%><tr><td valign=top><b><tt>hidden</tt></b></td>
+<td valign=top>
+Пользователю не предлагается поля для ввода, но содержимое команды передается
+при подтверждении и посылке формы. Это значение может быть использовано для
+передачи информации состояния при взаимодействии клиента сервера.
+<table bgcolor=aqua><tr><td><pre>&lt;INPUT TYPE=HIDDEN NAME=custom VALUE="c12-234-8534"&gt;</pre></td></tr></table></td>
+</tr><tr><td valign=top><b><tt>image</tt></b></td>
+<td valign=top>
+Картинка, по которой вы можете сделать щелчок мышью или другим указывающим
+устройством, что приводит к немедленному подтверждению и отсылке формы.
+Координаты выбранной точки измеряются в точках от верхнего левого угла и
+возвращаются (наряду с другими компонентами формы) точно так же, как для
+команды IMG.
+</td></tr><tr><td valign=top><b><tt>text</tt></b></td>
+<td valign=top>
+Поле ввода текста, значение по умолчанию.
+</td></tr><tr><td valign=top><b><tt>password</tt></b></td>
+<td valign=top>
+Поле ввода пароля; вводимые символы представляются как звездочки.
+</td></tr><tr><td valign=top><b><tt>checkbox</tt></b></td>
+<td valign=top>
+Кнопка, принимающая положения on (включено) и off(выключено).
+</td></tr><tr><td valign=top><b><tt>radio</tt></b></td>
+<td valign=top>
+Кнопка, принимающая положения on и off; причем остальные кнопки с тем-же
+параметром NAME ведут себя по принципу "одна из многих".
+</td></tr><tr><td valign=top><b><tt>submit</tt></b></td>
+<td valign=top>
+Кнопка, действие которой сводится к отсылке содержимого заполненной формы
+на сервер запросов.
+</td></tr><tr><td valign=top><b><tt>reset</tt></b></td>
+<td valign=top>
+Кнопка, которая устанавливает во всех интерфейсных элементах значения по умолчанию.
+</td></tr></table>
+броузеры четвертых версий позволяют организовать передачу файлов на сервер
+(File - Upload) - для этого используется значение
+<tt>TYPE=FILE</tt> и устанавливается режим передачи <tt>ENCTYPE</tt>. 
+
+<DT><strong>NAME</strong>=<I>идентификатор</I>
+<DD>символическое имя (оно не показывается) для этого поля ввода. Это поле
+должно присутствовать для всех полей ввода кроме "submit" and "reset", т.к.
+оно используется в стоке запроса при идентификации поля ввода при посылке
+ее на сервер после подтверждения формы.
+<DT><strong>VALUE</strong>=<I>значение</I>
+<DD>для полей ввода текста или пароля, может быть использовано для задания
+начального содержания поля. Для checkbox или radio button, VALUE задает значение кнопки, когда она находится
+в отмеченном состоянии (неотмеченные кнопки опускаются при посылке
+запроса); значение по
+умолчанию для checkbox или radio button - "on". Для типов "submit" и
+"reset", VALUE может быть
+использовано для задания надписи на этих кнопках.
+<DT><strong>CHECKED</strong> (значение не требуется)
+<DD> задает что данная кнопка типа checkbox или radio button отмечены
+по умолчанию; это поле работает только для кнопок типа checkbox и radio button.
+<DT><strong>SIZE</strong>=<i>n</i>
+<DD>физический размер поля ввода в символах; это поле действует только для
+элементов ввода текста или пароля.
+Если не присутствует явно, то по умолчанию равно 20.
+Многострочные поля ввода текста
+могут быть  заданы с помощью SIZE=ширина,высота; например SIZE=60,12. Заметим, что SIZE
+атрибут не следует использовать для задания многострочных полей ввода, т.к. можно
+воспользоваться командой TEXTAREA.
+<DT><strong>MAXLENGTH</strong>=<i>n</i>
+<DD>максимальное количество введенных символов, которые будут приниматься для ввода,
+верно только для полей ввода текста и пароля (и только в однострочных полях).
+По умолчанию -
+неограничено. Подразумевается, что поля ввода должны прокручиваться.
+</DL><P><a href="#forms"><img src="icons/up.gif" border=0></a>
+<HR>
+
+<h3>Модели событий</h3>
+<P>
+
+В JavaScript поддерживается обработка следующих событий:<br>
+<br>
+<table width=50% border=0>
+
+<td><a href="../../../JS/introduction.html#1_onAbort">Abort</a></td><td><a href="../../../JS/m_q.html#list_onFocus">Focus</a></td><td><a href="../../../JS/introduction.html#1_onMouseOut">MouseOut</a></td><td><a href="../../../JS/m_q.html#list_onSubmit">Submit</a></td><tr>
+<td><a href="../../../JS/m_q.html#list_onBlur">Blur</a></td><td><a href="../../../JS/m_q.html#list_onMouseOver">MouseOver</a></td><td><a href="../../../JS/m_q.html#list_onUnload">Unload</a></td><tr>
+<td><a href="../../../JS/m_q.html#list_onClick">Click</a></td>
+<td><a href="../../../JS/m_q.html#list_onChange">Change</a></td><td><a href="../../../JS/onkeyup.html">KeyUp</a></td><tr>
+<td><a href="../../../JS/m_q.html#list_onLoad">Load</a></td><td><a href="../../../JS/introduction.html#1_onReset">Reset</a></td>
+<td><a href="../../../JS/m_q.html#list_onSelect">Select</a></td>
+
+</table>
+
+<p>&nbsp;
+
+<h2>Объект Document</h2>
+Объект <b>document</b> содержит внутри себя множество подчиненных объектов и коллекций. В следующей таблице перечисленны свойства, возвращающие ссылки на них, и приведены описания соответствующих объектов и коллекций.
+</p>
+<ul><li>all - Все элементы страницы, включая теги &lt;HTML&gt;, &lt;HEAD&gt;, &lt;TITLE&gt; и &lt;BODY&gt;. 
+
+</li><li>anchors - Все "якоря" страницы
+</li><li>applets - Все Java-апплеты, изображения и элементы ActiveX
+</li><li>embeds - Все расширения, внедренные в страницу.
+</li><li>forms - Все Web-формы.
+</li><li>frames - Все фреймы набора фреймов. Как свойство объекта document поддерживается только IE.
+</li><li>images - Все изображения на странице.
+</li><li>layers - Все слои страницы. 
+</li><li>links - Все гиперссылки на странице. В случае NN также все "горячие" области &lt;AREA&gt;.
+</li><li>location - Объект location для данного документа. Как свойство объекта document поддерживается только IE.
+</li><li>scripts - Все скрипты, внедренные в страницу. Поддерживается только IE начиная с 4.0
+</li><li>selection - Объект selection, представляющий выделенный пользователем на странице текст. Поддерживается только IE начиная с 4.0 В NN используется метод getSelection.
+</li><li>styleSheets - Все таблицы стилей встроенные или привязанные к странице. Поддерживается только IE начиная с 4.0
+</li></ul>
+<p>Коллекция <i>all</i> имеет дополнительный метод <i>tags</i>, позволяющий фильтровать элементы коллекции по их тегу. В качестве параметра этот метод принимает строковое значение нужного тега.
+
+</p>
+
+<table><tr><td bgcolor=aqua>
+<pre>document.all.tags(&quot;H1&quot;)</pre></td></tr></table>
+<p>Данное выражение вернет ссылку на коллекцию, содержащую только заголовки первого уровня.
+</p><p>Такой же метод поддерживает коллекция <i>links</i>.
+</p><p>Также хочу упомянуть два метода, поддерживаемых Internet Explorer начиная с 5.0. Это методы <i>getElementByName</i> и <i>getElementByTagName</i>. Первый из них возвращает коллекцию элементов со значением атрубута <i>NAME</i>, переданным в качестве параметра. Поскольку атрибут <i>NAME</i> применяется в современном HTML очень редко, польза от этого метода невелика. Второй метод возвращает коллекцию элементов, созданных посредством тега, переданного в качестве параметра.
+
+</p><table><tr><td bgcolor=aqua>
+<pre>
+document.getElementsByName(&quot;someimage&quot;)
+document.getElementsByTagName(&quot;H1&quot;)</pre></td></tr></table>
+
+
+<table id="toc" class="toc" summary="Содержание"><tr><td><div id="toctitle"><h3>Методы объекта Document</h2></div>
+<ul>
+<li><a href="#clear.28.29">1 clear()  </a></li>
+<li><a href="#close.28.29">2 close()  </a></li>
+<li><a href="#createElement.28.29">3 createAttribute()  </a></li>
+
+<li><a href="#setAttributeNode">4 setAttributeNode  </a></li>
+<li><a href="#createElement.28.29">5 createElement()  </a></li>
+<li><a href="#elementFromPoint.28.29">6 elementFromPoint()  </a></li>
+<li><a href="#getElementById.28.29">7 getElementById()  </a></li>
+<li><a href="#getSelection.28.29">8 getSelection()  </a></li>
+
+<li   ><a href="#write.28.29">  9 write()  </a></li>
+<li   ><a href="#writeLn.28.29">  10 writeLn()  </a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } </script>
+<a name="clear.28.29"></a><h3> clear()  </h2>
+
+<p>Этот метод предназначен для очистки текущего документа из окна браузера.
+</p>
+<ul><li>Возвращаемое значение: отсутствует
+</li><li>Совместимость:IE начиная с 3.02, NN начиная с 2.0
+</li></ul>
+<a name="close.28.29"></a><h3> close()  </h2>
+<p>Заставляет Web-страницу немедленно обновить свое содержимое после использования методов write. Метод не принимает параметров и не возвращает значения.
+</p>
+<ul><li>Возвращает: нет
+</li><li>Совместимость:IE начиная с 4.0, NN начиная с 2.0
+</li></ul>
+<a name="createAttribute.28.29"></a><h3> createAttribute()  </h2>
+
+</p><table><tr><td bgcolor=aqua>
+<pre>createAttribute( &quot;Имя Атрибута&quot; )</pre></td></tr></tablE>
+<p>Генерирует объект атрибута и возвращает ссылку на него. При вызове метода указывается только название атрибута, таким образом, в сценарии назначается значение свойству nodeValue, а затем новый атрибур добавляется в существующий элемент с помощью метода *Возвращает: ссылка на объект атрибута
+</p>
+<a name="setAttributeNode"></a><h3> setAttributeNode  </h2>
+
+</p><table><tr><td bgcolor=aqua><pre>var newAttr = document.createAttribute(&quot;width&quot;);
+newAttr.nodeValue = &quot;80%&quot;;
+document.getElementById(&quot;myTable&quot;).setAttributeNode(newAttr);
+
+</pre></td></tr></table>
+<ul><li>Совместимость:NN начиная с 6.0
+</li></ul>
+<a name="createElement.28.29"></a><h3> createElement()  </h2>
+
+</p><table><tr><td bgcolor=aqua><pre>createElement( &quot;Имя дескриптора&quot; )</pre></td></tr></table>
+<p>Генерирует объект атрибута для любого дескриптора HTML(или XML), указанного в качастве параметра. Этот объект официально не является частью объектной модели текущего документа, так как он в состав документа пока ещё не входит. Но данный метод используется для вызова объекта элемента, который в конечном счёте будет помещён в документ.
+</p>
+<ul><li>Возвращает: ссылка на объект атрибута
+
+</li><li>Совместимость:IE начиная с 4.0, NN начиная с 6.0
+</li></ul>
+<a name="elementFromPoint.28.29"></a><h3> elementFromPoint()  </h2>
+
+</p><table><tr><td bgcolor=aqua><pre>elementFromPoint({X}, {Y})</pre></td></tr></table>
+<p>Возвращает ссылку на элемент, находящийся по координатам X и Y. Метод принимает два параметра, задающие в пикселях горизональную и вертикальную координаты соответственно.
+</p>
+<ul><li>Поддерживается IE начиная с 4.0
+</li></ul>
+<a name="getElementById.28.29"></a><h3> getElementById()  </h2>
+
+
+</p><table><tr><td bgcolor=aqua><pre>getElementById({Имя элемента})</pre></td></tr></table>
+<p>Возвращает элемент, имя которого передано в качестве параметра. Имя элемента страницы задается атрибутом ID. Метод принимает единственный параметр - имя элемента страницы.
+</p>
+<ul><li>Поддерживаестя IE начиная с 5.0
+</li></ul>
+<a name="getSelection.28.29"></a><h3> getSelection()  </h2>
+<p>Возвращает строку, содержащую текст, выделенный пользователем на странице. Метод не принимает параметров.
+</p>
+<ul><li>Поддерживается только NN начиная с 4.0
+</li></ul>
+<a name="write.28.29"></a><h3> write()  </h2>
+
+
+</p><table><tr><td bgcolor=aqua><pre>write({Текст})</pre></td></tr></table>
+<p>Записывает текст или HTML-код, переданный как параметр, в текущее место документа.
+</p>
+<ul><li>Поддерживается IE начиная с 3.02 и NN начиная с 2.0
+</li></ul>
+<a name="writeLn.28.29"></a><h3> writeLn()  </h2>
+
+</p><table><tr><td bgcolor=aqua><pre>writeLn({Текст})</pre></td></tr></table>
+<p>То же самое, что write, но в конце добавляет символ возврата каретки и перевода строки.
+</p>
+<ul><li>Поддерживается IE начиная с 3.02 и NN начиная с 2.0
+
+</li></ul>
+
+
+</BODY></HTML>

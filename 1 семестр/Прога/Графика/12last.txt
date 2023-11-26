@@ -1,0 +1,40 @@
+#include <graphics.h>
+#include <conio.h>
+void drawSnow(int x, int y, int color){
+	setcolor(color);
+	moveto(x, y);
+	lineto(x+5, y);
+	moveto(x,y);
+	lineto(x-5, y);
+	moveto(x,y);
+	lineto(x, y+5);
+	moveto(x,y);
+	lineto(x, y-5);
+	moveto(x,y);
+	lineto(x+5, y+5);
+	moveto(x,y);
+	lineto(x-5, y+5);
+	moveto(x,y);
+	lineto(x+5, y-5);
+	moveto(x,y);
+	lineto(x-5, y-5);
+
+}
+void letItSnow(){
+	int x[100], y[100];
+	for(int i = 0; i < 100; i++){
+		drawSnow(x[i], y[i], 0);
+		x[i] = rand()%1920;
+		y[i] = rand()%1080;
+		int color = rand()%15;
+		drawSnow(x[i], y[i], color);
+		delay(20);
+	}
+}
+
+
+int main() {
+	initwindow(1920, 1080);
+	while(1) letItSnow();
+	return 0;
+}

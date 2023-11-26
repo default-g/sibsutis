@@ -1,0 +1,8 @@
+/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/6/CMakeFiles/simpleComputer.dir
+/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/6/CMakeFiles/myTerm.dir
+/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/6/CMakeFiles/BigChars.dir
+/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/6/CMakeFiles/ShellMy.dir
+/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/6/CMakeFiles/MyReadKey.dir
+/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/6/CMakeFiles/Program.dir
+/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/6/CMakeFiles/edit_cache.dir
+/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/6/CMakeFiles/rebuild_cache.dir

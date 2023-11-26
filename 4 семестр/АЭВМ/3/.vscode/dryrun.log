@@ -1,0 +1,13 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/3'
+rm -f *.o *.a
+rm -f main
+g++  -c main.c
+g++ -c lib.c
+g++ -c myTerm.c
+g++ -c myBigChars.c
+ar rc lib.a lib.o myTerm.o myBigChars.o
+ranlib lib.a
+g++ -o main main.o -L. lib.a
+make: Leaving directory `/Users/defaultid/Google Drive/учоба/4 семестр/АЭВМ/3'
+ 

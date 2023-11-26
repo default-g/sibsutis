@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    img {
+        margin: -2px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <img id="hours">
+        <img src="dgc.gif">
+        <img id="min1">
+        <img id="min2">
+        <img id="ampm">
+        &ensp;
+        <img id="day1">
+        <img id="day2">
+        <img src="dgp.gif">
+        <img id="month1">
+        <img id="month2">
+        <img src="dgp.gif">
+        <img id="year1">
+        <img id="year2">
+        <img id="year3">
+        <img id="year4">
+    </p>
+
+
+
+    <button onclick="resetDate(); ">Сброс даты</button>
+    <script type="text/javascript">
+        function clock() {
+            var time = new Date();
+
+            document.getElementById('hours').src = "dg" + (time.getHours() - 12) + ".gif";
+
+            document.getElementById('min1').src = "dg" + Math.floor(time.getMinutes() / 10) + ".gif";
+            document.getElementById('min2').src = "dg" + time.getMinutes() % 10 + ".gif";
+
+            if (time.getHours < 12) {
+                document.getElementById('ampm').src = "dgam.gif";
+            } else {
+                document.getElementById('ampm').src = "dgpm.gif";
+            }
+
+            if (time.getDate() >= 10) document.getElementById('day1').src = "dg" + Math.floor(time.getDate() / 10) +
+                ".gif";
+            document.getElementById('day2').src = "dg" + time.getDate() % 10 + ".gif"
+
+            if (time.getMonth() + 1 >= 10) document.getElementById('month1').src = "dg" + Math.floor((time.getMonth() +
+                1) / 10) + ".gif";
+            document.getElementById('month2').src = "dg" + (time.getMonth() + 1) % 10 + ".gif"
+
+            let year = time.getFullYear();
+            for (var i = 4; i >= 1; i--) {
+                var current_digit = year % 10;
+                document.getElementById('year' + i).src = "dg" + current_digit + ".gif";
+                year = Math.floor(year / 10);
+            }
+        }
+        clock();
+
+        function resetDate() {
+            document.getElementById('day1').src = "dg0.gif";
+            document.getElementById('day2').src = "dg1.gif";
+            document.getElementById('month1').src = "dg0.gif";
+            document.getElementById('month2').src = "dg1.gif";
+        }
+    </script>
+
+</body>
+
+</html>

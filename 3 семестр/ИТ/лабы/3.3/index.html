@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+  
+<head>
+    <title>LAB 3.3</title>
+  <meta charset=utf-8>
+	<style>
+		#average_mark {
+			color: red
+		}
+		#marks_table {
+			border: 1px solid burlywood
+		}
+	
+    </style>
+  
+    <!--JavaScript-->
+    <script>
+	var cur_student = 0;
+	var xml_data;
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+  
+                if (this.readyState == 4 && this.status == 200) {
+					xml_data = this;
+                    fillStudData(xml_data);
+                }
+            };
+  
+            xmlhttp.open("GET", "ip-14.xml", true);
+            xmlhttp.send();
+        }
+		loadXMLDoc();
+		
+		function calcAverage()
+		{
+		    var xmlDoc = xml_data.responseXML;
+		    var s = xmlDoc.getElementsByTagName("Student")[cur_student].getElementsByTagName("Subject");
+			
+			var cnt = 0;
+			for (i = 0; i < s.length; i++) {
+				cnt+= parseInt(s[i].getAttribute('mark'));
+            }
+			var a = cnt / s.length;
+			if (a < 2)		
+			document.getElementById("average_mark").innerHTML = "Средний балл: " + a;
+			else
+			document.getElementById("average_mark").innerHTML = "Средний балл: " + a;
+		}
+  
+  
+        function fillStudData(xml) {
+            var i;
+			var a;
+            var xmlDoc = xml.responseXML;
+            var table =
+                `<tr><th>Предмет</th><th>&nbsp;  0 &nbsp;  1 &nbsp;  2 &nbsp;</th></tr>`;
+            var s = xmlDoc.getElementsByTagName("Student")[cur_student].getElementsByTagName("Subject");
+			var name = xmlDoc.getElementsByTagName("Student");
+			
+			var str_radio = "";
+			var str_name = "";
+			
+			str_name+= "<select  onchange=\"cur_student = this.selectedIndex;loadXMLDoc();\" Name='stud_name'> ";
+			
+			for (z = 0;z < name.length; z++) {
+				str_name+= "<option ";
+				if (z == cur_student)	
+				str_name += "selected>";
+				else
+				str_name += ">";
+				str_name +=  name[z].getAttribute('name') + "</option>";
+			}
+		
+			str_name+= "</select>";
+			str_name+= 
+			" Факультет: " +  name[cur_student].parentNode.getAttribute('faculty') +
+			" Группа: " + name[cur_student].parentNode.getAttribute('name')  + 
+			" Курс: " + name[cur_student].parentNode.getAttribute('course');
+
+            for (i = 0; i < s.length; i++) {
+				for (a = 0; a < 3; a++)
+				{
+					str_radio += "<input type='radio'";
+					if (parseInt(s[i].getAttribute('mark')) == a) {
+					str_radio += "checked>";
+					}
+					else
+					{
+					str_radio += "disabled>";
+					}
+				}
+                table  += "<tr><td>" +
+                    s[i].getAttribute('name') + "</td><td>" +
+                    str_radio + "</td><td>" +
+					"</tr>";
+				str_radio = ""
+            }
+  
+            document.getElementById("marks_table").innerHTML = str_name + table;
+
+			
+        }
+		
+    </script>
+</head>
+
+<body>
+ 
+      
+    <br><br>
+    <table id="marks_table"></table>
+	 <button onclick="calcAverage();"> Расчитать средний балл  </button>
+	 <button onclick="document.getElementById('average_mark').innerHTML = '';"> Отменить расчёт </button>
+	 <div id="average_mark"> <div>
+	 <div id="amount_of_two"></div>
+</body>
+  
+</html>

@@ -1,0 +1,35 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'f:/Google Drive/�����/4 �������/����/������/AVM'
+gcc -Wall -Werror -g -c src/main.c -o build/main.o
+ 
+gcc -Wall -Werror -g -c src/mySimpleComputer.c -o build/mySimpleComputer.o
+ar rc build/libmySimpleComputer.a build/mySimpleComputer.o
+gcc -Wall -Werror -g -c src/myTerm.c -o build/myTerm.o
+ar rc build/libmyTerm.a build/myTerm.o
+ 
+gcc -Wall -Werror -g -c src/basic.c -o build/basic.o
+ar rc build/libbasic.a build/basic.o
+ 
+gcc -Wall -Werror -g -c src/asm.c -o build/asm.o
+ar rc build/libasm.a build/asm.o
+ 
+gcc -Wall -Werror -g -c src/myBigChars.c -o build/myBigChars.o
+ar rc build/libmyBigChars.a build/myBigChars.o
+gcc -Wall -Werror -g -c src/cu.c -o build/cu.o
+ar rc build/libcu.a build/cu.o
+ 
+gcc -Wall -Werror -g -c src/printConsole.c -o build/printConsole.o
+ar rc build/libprintConsole.a build/printConsole.o
+gcc -Wall -Werror -g -c src/myReadkey.c -o build/myReadkey.o
+ar rc build/libmyReadkey.a build/myReadkey.o
+ 
+gcc -Wall -Werror -g -c src/mySignal.c -o build/mySignal.o
+ar rc build/libmySignal.a build/mySignal.o
+gcc -Wall -Werror -g -o bin/program build/main.o build/libmySimpleComputer.a build/libmyTerm.a build/libbasic.a build/libasm.a build/libmyBigChars.a build/libcu.a build/libprintConsole.a build/libmyReadkey.a build/libmySignal.a -Lbuild -lmySimpleComputer -Lbuild -lmyTerm -Lbuild -lmyBigChars -Lbuild -lbasic -Lbuild -lasm -Lbuild -lprintConsole -Lbuild -lmyReadkey -Lbuild -lmySignal -Lbuild -lcu
+ 
+gcc -Wall -Werror -g -c src/main_7.c -o build/main_7.o
+gcc -Wall -Werror -g -c src/disk.c -o build/disk.o
+ar rc build/libdisk.a build/disk.o
+gcc -Wall -Werror -g -o bin/disk build/main_7.o build/libdisk.a -Lbuild -ldisk
+make: Leaving directory 'f:/Google Drive/�����/4 �������/����/������/AVM'
+ 
