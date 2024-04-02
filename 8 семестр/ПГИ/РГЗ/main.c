@@ -22,6 +22,7 @@ typedef struct {
     uint32_t colors_used;
     uint32_t colors_important;
 } Head;
+#pragma(pop)
 
 typedef struct {
     Head head;
@@ -201,11 +202,9 @@ Image convert_8_bit_bmp_to_4_bit_bmp(Image image)
             uint64_t rastr_index = y * ((image.head.width + 1) / 2) + x / 2;
 
             if (x % 2 == 0) {
-                new_rastr[rastr_index] &= 0x0F;
-                new_rastr[rastr_index] |= (index << 4);
+                new_rastr[rastr_index] = (new_rastr[rastr_index] & 0x0F) | (index << 4);
             } else {
-                new_rastr[rastr_index] &= 0xF0;
-                new_rastr[rastr_index] |= (index & 0x0F);
+                new_rastr[rastr_index] = (new_rastr[rastr_index] & 0xF0) | (index & 0x0F);
             }
         }
     }
