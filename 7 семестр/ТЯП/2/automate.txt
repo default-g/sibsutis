@@ -1,0 +1,6 @@
+start: p
+stop: r p
+  0 1
+p q -
+q r r
+r q q
